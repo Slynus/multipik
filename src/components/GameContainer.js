@@ -4,6 +4,8 @@ import { Header, Button, Grid, GridRow, GridColumn, Label } from 'semantic-ui-re
 import Confetti from 'react-dom-confetti';
 import Jump from 'react-reveal/Jump';
 import Shake from 'react-reveal/Shake';
+import winAudioFile from '../media/win.wav';
+import looseAudioFile from '../media/loose.wav';
 
 const confettiConfig = {
     angle: "0",
@@ -46,13 +48,16 @@ const operations = [
     }
 ];
 
-function GameContainer() {
+const winAudio = new Audio(winAudioFile);
+const looseAudio = new Audio(looseAudioFile);
 
+function GameContainer() {
 
     const [currentOperation, setCurrentOperation] = useState(operations[0]);
     const [confettisActive, setConfettiActive] = useState(currentOperation.random_solutions.map(() => false));
     const [badResponses, setBadResponses] = useState(0);
     const [goodResponses, setGoodResponses] = useState(0);
+
 
     // Handle clic for all game (check solution & go to another test)
     const handleClick = (responseIndex) => {
@@ -60,9 +65,11 @@ function GameContainer() {
             let newConfState = [...confettisActive];
             newConfState[responseIndex] = true;
             setConfettiActive(newConfState);
+            winAudio.play();
             setTimeout(() => setConfettiActive(currentOperation.random_solutions.map(() => false)), 1000);
             setTimeout(() => { setGoodResponses(goodResponses + 1) }, 300);
         } else {
+            looseAudio.play();
             setBadResponses(badResponses + 1);
         }
 
