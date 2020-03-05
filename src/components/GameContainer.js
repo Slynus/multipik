@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './GameContainer.css';
-import { Header, Button, Grid } from 'semantic-ui-react'
+import { Header, Button, Grid, GridRow, GridColumn, Label } from 'semantic-ui-react'
 import Confetti from 'react-dom-confetti';
 import Jump from 'react-reveal/Jump';
 import Shake from 'react-reveal/Shake';
@@ -51,8 +51,8 @@ function GameContainer() {
 
     const [currentOperation, setCurrentOperation] = useState(operations[0]);
     const [confettisActive, setConfettiActive] = useState(currentOperation.random_solutions.map(() => false));
-    const [shakeIt, setShakeit] = useState(0);
-    const [jumpIt, setJumpit] = useState(0);
+    const [badResponses, setBadResponses] = useState(0);
+    const [goodResponses, setGoodResponses] = useState(0);
 
     // Handle clic for all game (check solution & go to another test)
     const handleClick = (responseIndex) => {
@@ -61,9 +61,9 @@ function GameContainer() {
             newConfState[responseIndex] = true;
             setConfettiActive(newConfState);
             setTimeout(() => setConfettiActive(currentOperation.random_solutions.map(() => false)), 1000);
-            setTimeout(() => { setJumpit(jumpIt + 1) }, 300);
+            setTimeout(() => { setGoodResponses(goodResponses + 1) }, 300);
         } else {
-            setShakeit(shakeIt + 1);
+            setBadResponses(badResponses + 1);
         }
 
         // let newOp = { ...operations[1] };
@@ -75,13 +75,23 @@ function GameContainer() {
 
     return (
         <div className="GameContainer">
-            <Shake spy={shakeIt} duration={1000}>
-                <Jump spy={jumpIt}>
+            <Shake spy={badResponses} duration={1000}>
+                <Jump spy={goodResponses}>
                     <Grid textAlign='center' style={{ height: '100vh' }} verticalAlign='middle'>
-                        <Grid.Column style={{ maxWidth: 450 }}>
-                            <Operation operation={currentOperation} />
-                            <ProductSolutions operation={currentOperation} handleClick={handleClick} confettisActive={confettisActive} />
-                        </Grid.Column>
+                        <GridRow>
+                            <Grid.Column style={{ maxWidth: 450 }}>
+                                <Operation operation={currentOperation} />
+                                <ProductSolutions operation={currentOperation} handleClick={handleClick} confettisActive={confettisActive} />
+                            </Grid.Column>
+                        </GridRow>
+                        <GridRow columns={2}>
+                            <GridColumn style={{ maxWidth: 150 }} >
+                                <Label circular color="green" size="huge">{goodResponses}</Label>
+                            </GridColumn>
+                            <GridColumn style={{ maxWidth: 150 }} >
+                                <Label circular color="red" size="huge">{badResponses}</Label>
+                            </GridColumn>
+                        </GridRow>
                     </Grid>
                 </Jump>
             </Shake>
