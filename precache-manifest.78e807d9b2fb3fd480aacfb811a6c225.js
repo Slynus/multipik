@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "ba8bbe7c6fb164104b185c4232f25fa4",
+    "revision": "a181516325a38cb96b8e5b8d23ed1214",
     "url": "/multipik/index.html"
   },
   {
@@ -8,8 +8,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/multipik/static/css/2.9b23fb12.chunk.css"
   },
   {
-    "revision": "7780b8acd3b111b99ae9",
-    "url": "/multipik/static/css/main.1e1a9c52.chunk.css"
+    "revision": "8eada42461fb1aabb9ad",
+    "url": "/multipik/static/css/main.026dfce1.chunk.css"
   },
   {
     "revision": "f7751665cb0c8107cb67",
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/multipik/static/js/2.e3a21ed5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "7780b8acd3b111b99ae9",
-    "url": "/multipik/static/js/main.ea6a2834.chunk.js"
+    "revision": "8eada42461fb1aabb9ad",
+    "url": "/multipik/static/js/main.dd1e5fc0.chunk.js"
   },
   {
     "revision": "6cf6210dc783c9114665",
@@ -72,10 +72,6 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/multipik/static/media/icons.faff9214.woff"
   },
   {
-    "revision": "b82c2913c7f6f1666d1803a9bc5ffc9e",
-    "url": "/multipik/static/media/loose.b82c2913.wav"
-  },
-  {
     "revision": "701ae6abd4719e9c2ada3535a497b341",
     "url": "/multipik/static/media/outline-icons.701ae6ab.eot"
   },
@@ -98,5 +94,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "3a77f1eda69c554a5fe4a51bd38e0295",
     "url": "/multipik/static/media/win.3a77f1ed.wav"
+  },
+  {
+    "revision": "5acd1a089942ad6d903b600a76ef063c",
+    "url": "/multipik/static/media/wrong.5acd1a08.mp3"
   }
 ]);
