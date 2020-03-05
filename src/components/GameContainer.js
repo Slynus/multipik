@@ -5,7 +5,8 @@ import Confetti from 'react-dom-confetti';
 import Jump from 'react-reveal/Jump';
 import Shake from 'react-reveal/Shake';
 import winAudioFile from '../media/win.wav';
-import looseAudioFile from '../media/loose.wav';
+import looseAudioFile from '../media/wrong.mp3';
+
 
 const confettiConfig = {
     angle: "0",
