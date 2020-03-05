@@ -1,27 +1,27 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "12e0c5a5ca5a4ba65e9f1a5a5cee56d8",
+    "revision": "ba8bbe7c6fb164104b185c4232f25fa4",
     "url": "/multipik/index.html"
   },
   {
-    "revision": "54c9ca513314fbca09e8",
+    "revision": "f7751665cb0c8107cb67",
     "url": "/multipik/static/css/2.9b23fb12.chunk.css"
   },
   {
-    "revision": "5c27034d99989fbb0ba1",
+    "revision": "7780b8acd3b111b99ae9",
     "url": "/multipik/static/css/main.1e1a9c52.chunk.css"
   },
   {
-    "revision": "54c9ca513314fbca09e8",
-    "url": "/multipik/static/js/2.1ddd1872.chunk.js"
+    "revision": "f7751665cb0c8107cb67",
+    "url": "/multipik/static/js/2.e3a21ed5.chunk.js"
   },
   {
     "revision": "49c45e15b22906ea61e3b3085d227f58",
-    "url": "/multipik/static/js/2.1ddd1872.chunk.js.LICENSE.txt"
+    "url": "/multipik/static/js/2.e3a21ed5.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "5c27034d99989fbb0ba1",
-    "url": "/multipik/static/js/main.98b9395d.chunk.js"
+    "revision": "7780b8acd3b111b99ae9",
+    "url": "/multipik/static/js/main.ea6a2834.chunk.js"
   },
   {
     "revision": "6cf6210dc783c9114665",
@@ -72,6 +72,10 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/multipik/static/media/icons.faff9214.woff"
   },
   {
+    "revision": "b82c2913c7f6f1666d1803a9bc5ffc9e",
+    "url": "/multipik/static/media/loose.b82c2913.wav"
+  },
+  {
     "revision": "701ae6abd4719e9c2ada3535a497b341",
     "url": "/multipik/static/media/outline-icons.701ae6ab.eot"
   },
@@ -90,5 +94,9 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
     "revision": "ef60a4f6c25ef7f39f2d25a748dbecfe",
     "url": "/multipik/static/media/outline-icons.ef60a4f6.woff"
+  },
+  {
+    "revision": "3a77f1eda69c554a5fe4a51bd38e0295",
+    "url": "/multipik/static/media/win.3a77f1ed.wav"
   }
 ]);
